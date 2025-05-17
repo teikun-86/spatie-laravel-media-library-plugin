@@ -85,7 +85,7 @@ class SpatieMediaLibraryFileUpload extends FileUpload
 
         $this->dehydrated(false);
 
-        $this->getUploadedFileUsing(static function (SpatieMediaLibraryFileUpload $component, string $file): ?array {
+        $this->getUploadedFileUsing(static function (SpatieMediaLibraryFileUpload $component, string ?$file): ?array {
             if (! $component->getRecord()) {
                 return null;
             }
